@@ -1,17 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <digital-tube :value="value"></digital-tube>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import DigitalTube from '@/components/digital-tube'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DigitalTube
+  },
+  data () {
+    return {
+      value: 0,
+    }
+  },
+  mounted () {
+    //更新数码管的值
+    setInterval(() => {
+      this.value = (++this.value) % 10
+    }, 1000)
   }
 }
 </script>
