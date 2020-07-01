@@ -72,11 +72,6 @@
 export default {
   data () {
     return {
-      width: 200,
-      height: 400,
-      segmentWidth: 42,
-      segmentLength: 200,
-      segmentDiff: 42,
       fillColor: '#3399CC',
       strokeColor: '#336699',
       segmentShowList: [],
@@ -86,6 +81,26 @@ export default {
     value: {
       type: Number,
       default: 0,
+    },
+    width: {
+      type: Number,
+      default: 200,
+    },
+    height: {
+      type: Number,
+      default: 400,
+    },
+    segmentWidth: {
+      type: Number,
+      default: 42,
+    },
+    segmentLength: {
+      type: Number,
+      default: 200,
+    },
+    segmentDiff: {
+      type: Number,
+      default: 42,
     },
     //是否有小数点
     hasPoint: {
